@@ -18,7 +18,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import data from './data'
 const Stack = createStackNavigator();
-
+import firebase from 'react-native-firebase'
+import {scale, verticalScale, moderateScale} from './Responsive'
 const apiKey = 'AIzaSyBJ3ntReiv0L19H2RoYW62LpRdIuyPhIpw'
 const channelId = 'UCQzdMyuz0Lf4zo4uGcEujFw'
 const results = 30
@@ -34,23 +35,6 @@ const results = 30
     }
   }
 
-  componentDidMount(){
-    // fetch(`https://www.googleapis.com/youtube/v3/search/?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${results}`)
-    // //fetch('https://www.googleapis.com/youtube/v3/search/?key=AIzaSyBJ3ntReiv0L19H2RoYW62LpRdIuyPhIpw&channelId=UCQzdMyuz0Lf4zo4uGcEujFw&part=snippet,id&order=date&maxResults=30')
-    // .then(res => res.json())
-    // .then(res => {
-    //   const videoId = []
-    //   res.items.forEach(item => {
-    //     videoId.push(item)
-    //   })
-    //   this.setState({
-    //     data: videoId
-    //   }) 
-    // })
-    // .catch(error => {
-    //   console.error(error)
-    // })
-  }
 
   render() {
     const {navigate} = this.props.navigation
@@ -69,16 +53,16 @@ const results = 30
                       source={{uri: item.snippet.thumbnails.medium.url}} 
                       style={{width: 340, height: 180}}/>
                       <View style={styles.vidItems}>
-                      <View style={{flex:1,paddingLeft:10}}>
+                      <View style={{flex:1,paddingLeft:scale(8),alignItems:'flex-start'}}>
                       <Image 
                         source={require('./images/NightKing.jpg')} 
-                        style={{width: 40, height: 40, borderRadius: 20, marginRight: 5}}/>
+                        style={{width: 40, height: 40, borderRadius: 20, marginRight: scale(10)}}/>
                       </View>
                       <View style={{flex:8}}>
                       <Text style={styles.vidText}>{item.snippet.title}</Text>
                       </View>
                       <View style={{flex:1}}>
-                      <Icon name='more-vert' size={20} color='#555'/> 
+                        <Icon name='more-vert' size={20} color='#555'/> 
                       </View>
                     </View>
                   </View>

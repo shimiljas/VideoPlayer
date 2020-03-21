@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "712745861851",
+    "firebase_url": "https://videoplayer-8b555.firebaseio.com",
+    "project_id": "videoplayer-8b555",
+    "storage_bucket": "videoplayer-8b555.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712745861851:android:4663f9c3253322c6fac2fe",
+        "android_client_info": {
+          "package_name": "com.videoplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712745861851-qr8pnvcch62usvsl4bipnndsf25rqhm0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf-qVAonDbhFAOxeKMBO-RzH9WDEyJqr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712745861851-qr8pnvcch62usvsl4bipnndsf25rqhm0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "712745861851-43rec8t8hksr9ftvt64u58mph5qo1doc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.softwave.VideoPlayer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
